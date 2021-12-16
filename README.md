@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Background
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple wrapper for Stripe's future payment set-up process. It creates a stripe session and redirects the user to Stripe to enter their card information. It provides pages for handling the payment success and cancellation.
 
-## Available Scripts
+The repository contains both a [React.js](https://reactjs.org) interface that can be branded with a company name and logo. The [Express.js](https://expressjs.com) back-end server handles creating the Stripe session. The two are connected using npm's proxy setting.
 
-In the project directory, you can run:
+The React development server runs on port `3000`, while Express.js runs on `3001`.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
+In the project directory, run:
+
+### `npm install`
+
+then
+
+### `npm run all`
+
+This will run both the React and Express servers.
+
+To run an individual server, you may run the individual commands:
+
+- `npm start` for the React development server.
+- `npm run api` for the Express back-end.
+
+The React app runs in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Set up branding and Stripe
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open the default `.env` file provided.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Enter your **Stripe private key** after `STRIPE_API_KEY`
+- Set the success URL your user will be redirected to after they successfully add their payment method after `SUCCESS_URL`
+- Likewise, set the cancellation URL your user will be redirected to after cancelling the operation after `CANCEL_URL`
+- The company name can be changed by adjusting `REACT_APP_COMPANY_NAME`
+- The company logo can also be changed by adjusting `REACT_APP_LOGO`. You should place the logo in the `/public` directory.
