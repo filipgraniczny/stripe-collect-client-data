@@ -38,3 +38,10 @@ Open the default `.env` file provided.
 - Likewise, set the cancellation URL your user will be redirected to after cancelling the operation after `CANCEL_URL`
 - The company name can be changed by adjusting `REACT_APP_COMPANY_NAME`
 - The company logo can also be changed by adjusting `REACT_APP_LOGO`. You should place the logo in the `/public` directory.
+
+## Screenshots
+
+![Home Page](https://user-images.githubusercontent.com/6297989/146352809-67dff5cc-ca22-4fd9-a48f-4e8dabd8fd85.png)
+![Stripe Payment Set-up Page](https://user-images.githubusercontent.com/6297989/146352892-480208d2-39c9-40d0-bb22-ea00a9ae621f.png)
+![Success Page](https://user-images.githubusercontent.com/6297989/146352910-188e799c-e6c2-4402-b143-86d698ae473e.png)
+
