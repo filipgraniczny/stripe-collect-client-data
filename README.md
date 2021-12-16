@@ -16,7 +16,7 @@ then
 
 ### `npm run all`
 
-This will run both the React and Express servers.
+This will run both the React and Express servers using the `npm-run-all` dependency
 
 To run an individual server, you may run the individual commands:
 
