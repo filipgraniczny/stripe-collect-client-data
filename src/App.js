@@ -51,12 +51,10 @@ function App() {
 }
 
 async function handleClick(setShowError) {
-  console.log("here");
-  const response = await fetch("/api/create-checkout-session", {
-    method: "POST",
-  });
-
   try {
+    const response = await fetch("/api/create-checkout-session", {
+      method: "POST",
+    });
     const result = await response.text();
     setShowError(false);
     window.location.href = result;
