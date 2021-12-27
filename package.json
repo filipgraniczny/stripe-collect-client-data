@@ -22,7 +22,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "api": "node api/index.js",
-    "all": "npm-run-all --parallel start api"
+    "api-dev": "nodemon api/index.js",
+    "all": "npm-run-all --parallel start api",
+    "all-dev": "npm-run-all --parallel start api-dev"
   },
   "eslintConfig": {
     "extends": [
